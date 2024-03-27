@@ -46,4 +46,27 @@ const Member = sequelize.define(
   }
 )
 
-export { Member }
+const Quiz = sequelize.define(
+  'Quiz',
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    }, 
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    questions: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: []
+    }
+  },
+  {
+    timestamps: false
+  }
+)
+
+export { Member, Quiz }
