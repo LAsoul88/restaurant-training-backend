@@ -5,6 +5,7 @@ import { Member } from './models/Member'
 const app = express()
 const port = 3000
 
+// middleware to parse through url and json in requests
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
