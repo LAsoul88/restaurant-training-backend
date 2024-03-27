@@ -3,6 +3,6 @@ import memberControllers from '../controllers/members'
 
 const router = express.Router()
 
-router.get('/member/:id', memberControllers.memberById)
+router.get('/:id', memberControllers.memberById)
 
 export default router
