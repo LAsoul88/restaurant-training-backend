@@ -1,7 +1,7 @@
 import members from './members'
 
-const routes = {
-  members,
+const routesPathMap = {
+  '/members': members,
 }
 
-export default routes
+export default routesPathMap

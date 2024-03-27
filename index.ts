@@ -1,5 +1,6 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import { generateRoutes } from './helpers/generateRoutes'
 
 import routes from './routes/index'
 
@@ -10,7 +11,7 @@ const port = 3000
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.use('/', routes.members)
+generateRoutes(routes, app)
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`)
